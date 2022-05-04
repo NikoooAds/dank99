@@ -1,0 +1,7 @@
+[Unit]
+Description=Print ALL ARP links
+Documentation=man:arp
+
+[Service]
+ExecStart=
+ExecStart=/usr/bin/arp-minutely-scanner
