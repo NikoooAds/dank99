@@ -1,8 +1,8 @@
-.PHONY: all start run clear
+.PHONY: all start run boot clear
 
 app := arp-minutely-scanner
 
-all: copy reload start
+all: copy reload start boot
 
 copy:
 	@cp -i $(app) /usr/bin/
@@ -13,6 +13,9 @@ reload:
 
 start:
 	systemctl start $(app).timer
+
+boot:
+	@systemctl enable $(app).timer
 
 clear:
 	systemctl stop $(app).timer
