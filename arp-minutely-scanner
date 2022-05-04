@@ -1,0 +1,8 @@
+#!/bin/bash
+
+INTER=wlp3s0
+INTER_EXIST=$(ifconfig -a | grep -w $INTER)
+
+if [[ -n $INTER_EXIST ]]; then
+	arp -ni $INTER
+fi
