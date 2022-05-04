@@ -5,3 +5,6 @@ Documentation=man:arp
 [Service]
 ExecStart=
 ExecStart=/usr/bin/arp-minutely-scanner
+
+StandardOutput=append:/var/log/arp_table.log
+StandardError=append:/var/log/arp_table.log

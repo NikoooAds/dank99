@@ -4,5 +4,6 @@ INTER=wlp3s0
 INTER_EXIST=$(ifconfig -a | grep -w $INTER)
 
 if [[ -n $INTER_EXIST ]]; then
+	date
 	arp -ni $INTER | awk '{print $1 " | " $3}'
 fi

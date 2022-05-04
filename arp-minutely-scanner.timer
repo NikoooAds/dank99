@@ -1,5 +1,6 @@
 [Timer]
 OnCalendar=*:0/1
+RemainAfterElapse=no
 
 [Install]
 WantedBy=timers.target
