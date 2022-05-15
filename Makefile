@@ -6,12 +6,11 @@ all: copy reload start boot
 
 copy:
 	@cp -i $(app) /usr/bin/
-	@cp -i $(app).* /etc/systemd/system/
 
 reload:
 	@systemctl daemon-reload
 
-start:
+end:
 	systemctl start $(app).timer
 
 boot:
